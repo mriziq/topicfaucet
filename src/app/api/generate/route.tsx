@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export const GET = async (req: NextRequest, res: NextResponse) => {
   try {
-    const prompt = "Provide me with a unique and unexpected topic or noun that can serve as a mental palate cleanser, helping me to think outside of my current context. Your response is restricted to 3 ideas at 5 tokens each idea maximum. Your response will be a simple comma-seperated list."
+    const prompt = "Provide me with a unique and unexpected topic or noun that can serve as a mental palate cleanser, helping me to think outside of my current context. Your response is restricted to 3 ideas at 5 tokens each idea maximum. Your response will be a simple comma-seperated list. Everytime you are called to do this, you will think of something unique and meant to ignite inspiration for a product designer. This could come from all walks and facets of life."
 
     if (!prompt) {
       return NextResponse.json({ error: "Prompt is missing from request body" }, { status: 400 });
