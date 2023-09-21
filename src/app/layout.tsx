@@ -14,11 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <body>
-        <Providers>
+
+      <Providers>
         {children}
-        </Providers>
-        </body>
+      </Providers>
+
     </>
   )
 }
