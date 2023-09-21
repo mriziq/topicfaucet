@@ -35,7 +35,8 @@ const FetchAPIComponent = () => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const res = await fetch('/api/generate');
+      const timestamp = new Date().getTime(); // Cache busting parameter
+      const res = await fetch(`/api/generate?${timestamp}`);
       if (!res.ok) {
         throw new Error('Network response was not ok: ' + res.statusText);
       }
