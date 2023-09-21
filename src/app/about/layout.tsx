@@ -4,7 +4,7 @@ import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: 'Topic Faucet | About',
-  description: 'Instantly refresh your context when searching for design inspiration.',
+  description: 'The story behind the tool that lets you instantly refresh your context when searching for design inspiration.',
 }
 
 export default function RootLayout({
