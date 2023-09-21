@@ -5,6 +5,7 @@ import { Box, Kbd, Center, Spacer, VStack } from '@chakra-ui/react';
 import { keyframes } from '@chakra-ui/system';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 const softlyFlash = keyframes`
   0% { opacity: 1; }
@@ -12,7 +13,14 @@ const softlyFlash = keyframes`
   100% { opacity: 1; }
 `;
 
+
 export default function Home() {
+  const [domLoaded, setDomLoaded] = useState(false);
+
+  useEffect(() => {
+    setDomLoaded(true);
+  }, []);
+
   return (
     <>
     <Center paddingTop={50}>
@@ -21,7 +29,7 @@ export default function Home() {
       <Image src={"./logo.svg"} alt='Topic Faucit Logo' width={128} height={180}/>
       </Link>
       <Box>
-      <FetchAPIComponent />
+      {domLoaded && (<FetchAPIComponent />)}
       </Box>
       <Box 
       as="div" 
