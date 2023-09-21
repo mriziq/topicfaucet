@@ -20,7 +20,9 @@ export default function Home() {
         <Link href={"/about"}>
       <Image src={"./logo.svg"} alt='Topic Faucit Logo' width={128} height={180}/>
       </Link>
+      <Box>
       <FetchAPIComponent />
+      </Box>
       <Box 
       as="div" 
       display="flex" 
@@ -28,7 +30,6 @@ export default function Home() {
       alignItems="center" 
       animation={`${softlyFlash} 2s infinite`}
       fontSize="lg"
-      paddingTop={3}
     >
       Press<span style={{"marginLeft": 7, "marginRight": 7}}><Kbd>space</Kbd></span>for more
     </Box>

@@ -67,18 +67,32 @@ const FetchAPIComponent = () => {
     };
   }, []);
 
+  const getRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
   return (
-    <Center height="25vh">
+    <Center>
       {loading ? (
         <Spinner size="xl" />
       ) : data ? (
-        <VStack spacing={4} width={['90%', '80%', '60%', '40%']}>
+        <VStack spacing={4} paddingTop={20} paddingBottom={10}>
           {data.choices[0]?.message?.content.split(',').map((segment, index) => (
-            <Text key={index} fontSize={["24px", "32px", "48px", "64px"]} textAlign="center" fontWeight={"bold"}>
+            <Text
+              key={index}
+              fontSize={["24px", "32px", "48px", "64px"]}
+              textAlign="center"
+              fontWeight={"bold"}
+              color={getRandomColor()}
+            >
               {segment.trim()}
             </Text>
           )) || <Text fontSize={["24px", "32px", "48px", "64px"]}>No content available</Text>}
-          {/* <Text fontSize={["24px", "32px", "48px", "64px"]}>No content available</Text> */}
         </VStack>
       ) : error ? (
         <Text fontSize="2xl" color="red.500">
