@@ -64,6 +64,10 @@ const FetchAPIComponent = () => {
     };
   }, []);
 
+  const getRandomColor = () => {
+    return '#' + Math.floor(Math.random()*16777215).toString(16);
+  };
+
   return (
     <Center height="100vh">
       {loading ? (
@@ -71,7 +75,7 @@ const FetchAPIComponent = () => {
       ) : data ? (
         <VStack spacing={4} width={['90%', '80%', '60%', '40%']}>
           {data.choices[0]?.message?.content.split(',').map((segment, index) => (
-            <Text key={index} fontSize={["24px", "32px", "48px", "64px"]} textAlign="center">
+            <Text key={index} fontSize={["24px", "32px", "48px", "64px"]} textAlign="center" color={getRandomColor()}>
               {segment.trim()}
             </Text>
           )) || <Text fontSize={["24px", "32px", "48px", "64px"]}>No content available</Text>}
