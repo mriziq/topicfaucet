@@ -21,11 +21,8 @@ export default function About() {
         </Heading>
         <Box backgroundColor="gray.50" padding="4">
           <Text fontSize={18} fontStyle={"italic"}>
-            <span style={{"color": "blue"}}><a href='https://www.github.com/mriziq/topicfaucet'>📌 Built with Next.js and GPT 3.5 Turbo</a></span>, Topic Faucet is a tool to help Designers (or anyone) switch contexts while looking to draw inspiration during the design process. It was created by
-            <Link href='https://www.ischool.berkeley.edu/people/amer-mriziq#profile-main' style={{"color": "blue", "marginRight": 5, "marginLeft": 5}}>
-              Amer Mriziq
-            </Link>
-            in 2023. He enjoys sunsets and long walks on the beach. His favorite hobby is refreshing his OpenAI Billing dashboard. His fun fact is that he recently changed his Venmo username to @payamer.
+            <span style={{"color": "blue"}}><a href='https://www.github.com/mriziq/topicfaucet'>📌 Built with Next.js and GPT 3.5 Turbo</a></span>, Topic Faucet is a tool to help Designers (or anyone) switch contexts while looking to draw inspiration during the design process. 
+            A little bit about the creator: he enjoys sunsets and long walks on the beach. His favorite hobby is refreshing his OpenAI Billing dashboard. His fun fact is that he recently changed his Venmo username to @payamer.
           </Text>
         </Box>
         <Text mt={4} fontSize={18}>
