@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: 'Topic Faucet',
+  title: 'Topic Faucet | About',
   description: 'Instantly refresh your context when searching for design inspiration.',
 }
 

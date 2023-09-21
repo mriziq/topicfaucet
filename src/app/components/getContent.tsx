@@ -40,6 +40,9 @@ const FetchAPIComponent = () => {
         throw new Error('Network response was not ok: ' + res.statusText);
       }
       const result: ApiResponse = await res.json();
+      if (!result.choices) {
+        throw new Error("If you're reading this then that means TopicFaucet broke. My bad. I'm doing my best. Anyways, if you're reading this, than email me mriziq@berkeley.edu and let me know what happened.");
+      }
       setData(result);
     } catch (error: any) {
       setError(error.message);
