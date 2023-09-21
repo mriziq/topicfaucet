@@ -3,7 +3,6 @@ import { VStack, Center, Heading, Text, Box } from '@chakra-ui/react';
 import { keyframes } from '@chakra-ui/system';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation'
 
 const softlyFlash = keyframes`
   0% { opacity: 1; }
@@ -12,12 +11,11 @@ const softlyFlash = keyframes`
 `;
 
 export default function About() {
-  const router = useRouter()
 
   return (
     <Center>
       <VStack spacing={8} width={{ base: "100%", sm: "80%", lg: "60%" }} textAlign="left" paddingTop={50} paddingBottom={150}>
-          <Image src={"/logo.svg"} alt='Topic Faucit Logo' width={128} height={180} onClick={() => router.push('/')}/>
+          <Image src={"/logo.svg"} alt='Topic Faucit Logo' width={128} height={180}/>
         <Heading as="h1" size="lg">
           About
         </Heading>
