@@ -35,11 +35,15 @@ const FetchAPIComponent = () => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const res = await fetch('/api/generate');
+      const timestamp = new Date().getTime(); // Cache busting parameter
+      const res = await fetch('/api/generate?_=' + new Date().getTime());
       if (!res.ok) {
         throw new Error('Network response was not ok: ' + res.statusText);
       }
       const result: ApiResponse = await res.json();
+      if (!result.choices) {
+        throw new Error("-------------Oh God, Topic Faucet tried to do something and got hurt in the process.My bad. Kids, am I right? Let me know what happened-------------mriziq@berkeley.edu-------------");
+      }
       setData(result);
     } catch (error: any) {
       setError(error.message);
@@ -69,7 +73,7 @@ const FetchAPIComponent = () => {
   };
 
   return (
-    <Center height="100vh">
+    <Center>
       {loading ? (
         <Spinner size="xl" />
       ) : data ? (
