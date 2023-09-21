@@ -68,7 +68,7 @@ const FetchAPIComponent = () => {
   }, []);
 
   return (
-    <Center height="19vh">
+    <Center height="25vh">
       {loading ? (
         <Spinner size="xl" />
       ) : data ? (

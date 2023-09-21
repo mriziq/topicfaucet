@@ -20,20 +20,20 @@ export default function Home() {
         <Link href={"/about"}>
       <Image src={"./logo.svg"} alt='Topic Faucit Logo' width={128} height={180}/>
       </Link>
+      <FetchAPIComponent />
       <Box 
       as="div" 
       display="flex" 
       justifyContent="center" 
       alignItems="center" 
       animation={`${softlyFlash} 2s infinite`}
-      fontSize="xl"
-      paddingTop={5}
+      fontSize="lg"
+      paddingTop={3}
     >
       Press<span style={{"marginLeft": 7, "marginRight": 7}}><Kbd>space</Kbd></span>for more
     </Box>
     </VStack>
     </Center>
-      <FetchAPIComponent />
     </>
   )
 }
