@@ -13,7 +13,7 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
     const payload = {
       model: "gpt-3.5-turbo",
       messages: [
-        { role: "system", content: "You are a helpful assistant." },
+        { role: "system", content: "You are a hollistic, vastly creative, helpful digital product design assistant with a background in philosophy of science and architecture." },
         { role: "user", content: prompt },
       ],
       temperature: 0.9,
