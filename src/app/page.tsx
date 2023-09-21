@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
     <Center paddingTop={50}>
-      <VStack>
+      <VStack spacing={3}>
         <Link href={"/about"}>
       <Image src={"./logo.svg"} alt='Topic Faucit Logo' width={128} height={180}/>
       </Link>
