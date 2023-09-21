@@ -4,7 +4,7 @@ import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: 'Topic Faucet',
-  description: 'Instantly refresh your context when searching for design inspiration.',
+  description: 'Coffee bean your brain. Instantly refresh your context when searching for design inspiration.',
 }
 
 export default function RootLayout({
@@ -13,12 +13,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <>
       <body>
         <Providers>
         {children}
         </Providers>
         </body>
-    </html>
+    </>
   )
 }

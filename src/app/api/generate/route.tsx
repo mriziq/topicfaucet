@@ -3,7 +3,9 @@ import type { NextRequest } from 'next/server'
 
 export const GET = async (req: NextRequest, res: NextResponse) => {
   try {
-    const prompt = "Provide me with a unique and unexpected topic or noun that can serve as a mental palate cleanser, helping me to think outside of my current context. Your response is restricted to 3 ideas at 5 tokens each idea maximum. Your response will be a simple comma-seperated list. Everytime you are called to do this, you will think of something unique and meant to ignite inspiration for a product designer. This could come from all walks and facets of life."
+    console.log(req.body)
+    // const { prompt } = req.body;
+    const prompt = "Provide me with a unique and unexpected topic or noun that can serve as a mental palate cleanser, helping me to think outside of my current context. Your response is restricted to 3 ideas at each eith a total token size equal to or less than your maximum of 30. Your response will be a simple comma-seperated list."
 
     if (!prompt) {
       return NextResponse.json({ error: "Prompt is missing from request body" }, { status: 400 });
@@ -17,8 +19,8 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
         { role: "user", content: prompt },
         { role: "system", content: `unique_param: ${uniqueParam}` }, // Adding unique param here
       ],
-      temperature: 0.7,
-      max_tokens: 15,
+      temperature: 0.9,
+      max_tokens: 30,
     };
 
 
