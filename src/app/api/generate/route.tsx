@@ -28,6 +28,7 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
       method: "POST",
       body: JSON.stringify(payload),
     });
+    res.headers.set('Cache-Control', 'no-store');
 
     const json = await response.json();
     
