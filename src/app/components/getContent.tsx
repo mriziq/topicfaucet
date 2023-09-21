@@ -77,7 +77,7 @@ const FetchAPIComponent = () => {
       {loading ? (
         <Spinner size="xl" />
       ) : data ? (
-        <VStack spacing={4} width={"80vw"} paddingTop={75} paddingBottom={75}>
+        <VStack spacing={4} width={"80vw"} paddingTop={300} paddingBottom={0}>
           {data.choices[0]?.message?.content.split(',').map((segment, index) => (
             <Text key={index} fontSize={["24px", "32px", "48px", "64px"]} textAlign="center" color={getRandomColor()} fontWeight={"bold"}>
               {segment.trim()}
