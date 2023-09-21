@@ -75,7 +75,7 @@ const FetchAPIComponent = () => {
       ) : data ? (
         <VStack spacing={4} width={['90%', '80%', '60%', '40%']}>
           {data.choices[0]?.message?.content.split(',').map((segment, index) => (
-            <Text key={index} fontSize={["24px", "32px", "48px", "64px"]} textAlign="center" color={getRandomColor()}>
+            <Text key={index} fontSize={["24px", "32px", "48px", "64px"]} textAlign="center" color={getRandomColor()} fontWeight={"bold"}>
               {segment.trim()}
             </Text>
           )) || <Text fontSize={["24px", "32px", "48px", "64px"]}>No content available</Text>}
