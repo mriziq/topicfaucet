@@ -32,9 +32,7 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
       method: "POST",
       body: JSON.stringify(payload),
     });
-    
-    response.headers.set('Cache-Control', 'no-store')
-    
+        
     const json = await response.json();
 
     return NextResponse.json(json, { headers: { "Cache-Control": "no-store, max-age=0" } });
