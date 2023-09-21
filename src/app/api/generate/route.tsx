@@ -16,7 +16,7 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
         { role: "system", content: "You are a helpful assistant." },
         { role: "user", content: prompt },
       ],
-      temperature: 0.7,
+      temperature: 0.9,
       max_tokens: 30,
     };
 
