@@ -35,11 +35,15 @@ const FetchAPIComponent = () => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const res = await fetch('/api/generate');
+      const timestamp = new Date().getTime(); // Cache busting parameter
+      const res = await fetch('/api/generate?_=' + new Date().getTime());
       if (!res.ok) {
         throw new Error('Network response was not ok: ' + res.statusText);
       }
       const result: ApiResponse = await res.json();
+      if (!result.choices) {
+        throw new Error("-------------Oh God, Topic Faucet tried to do something and got hurt in the process.My bad. Kids, am I right? Let me know what happened-------------mriziq@berkeley.edu-------------");
+      }
       setData(result);
     } catch (error: any) {
       setError(error.message);
@@ -64,14 +68,29 @@ const FetchAPIComponent = () => {
     };
   }, []);
 
+  const getRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
   return (
-    <Center height="100vh">
+    <Center>
       {loading ? (
         <Spinner size="xl" />
       ) : data ? (
-        <VStack spacing={4} width={['90%', '80%', '60%', '40%']}>
+        <VStack spacing={4} paddingTop={20} paddingBottom={10}>
           {data.choices[0]?.message?.content.split(',').map((segment, index) => (
-            <Text key={index} fontSize={["24px", "32px", "48px", "64px"]} textAlign="center">
+            <Text
+              key={index}
+              fontSize={["24px", "32px", "48px", "64px"]}
+              textAlign="center"
+              fontWeight={"bold"}
+              color={getRandomColor()}
+            >
               {segment.trim()}
             </Text>
           )) || <Text fontSize={["24px", "32px", "48px", "64px"]}>No content available</Text>}
