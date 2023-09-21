@@ -26,7 +26,7 @@ export default function About() {
           </Text>
         </Box>
         <Text mt={4} fontSize={18}>
-          While trying out some <span style={{"color": "blue"}}><a href='https://medium.com/the-creative-founder/comparative-research-done-right-19710a81fe2b'>Adjacency Analyses</a></span> exercises in <span style={{"color": "blue"}}><a href='https://www.ischool.berkeley.edu/courses/info/215'>Product Design Studio</a></span> at Berkeley&apos;s <span style={{"color": "blue"}}><a href="https://en.wikipedia.org/wiki/UC_Berkeley_School_of_Information">School of Information</a></span>, and I struggled to switch contexts to leave the scope of my design problem and look elsewhere for inspiration.
+          While trying out some <span style={{"color": "blue"}}><a href='https://medium.com/the-creative-founder/comparative-research-done-right-19710a81fe2b'>Adjacency Analyses</a></span> exercises in <span style={{"color": "blue"}}><a href='https://www.ischool.berkeley.edu/courses/info/215'>Product Design Studio</a></span> at Berkeley&apos;s <span style={{"color": "blue"}}><a href="https://en.wikipedia.org/wiki/UC_Berkeley_School_of_Information">School of Information</a></span>, I struggled to switch contexts to leave the scope of my design problem and look elsewhere for inspiration.
           And yes, despite the entire human corpus of knowledge at my fingertips, I spent most of the time staring at my screen and mentally checking out to this scene:
         </Text>
         <Image src={"/meme.gif"} alt='Spongebob Running Around Meme' width={480} height={360} />
