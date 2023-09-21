@@ -34,7 +34,7 @@ export default function About() {
         </Text>
         <Image src={"/meme.gif"} alt='Spongebob Running Around Meme' width={480} height={360} />
         <Text fontSize={18}>
-          I was wishing, no, pleading my screen would just flash me some ideas. Just one word. Something to get my mind off of <i>picnics</i>. Any word. In big letters that fill the screen. And new ideas every time I press one button, preferably the biggest one on my keyboard. It would be like a tap of ideas.
+          I was wishing, no, pleading with my screen to just flash me some ideas. Just one word. Not asking for a lot (<a href='https://arxiv.org/abs/2308.07107'>am I?</a>). Something to get my mind off of <i>picnics</i>. Any word. In big letters that fill the screen. And new ideas every time I press one button, preferably the biggest one on my keyboard. It would be like a tap of ideas.
         </Text>
         <Image src={"/snapshot.png"} alt='Snapshot of notepad' width={605} height={280} />
         <Text fontSize={18}>
