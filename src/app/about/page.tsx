@@ -35,7 +35,7 @@ export default function About() {
         </Text>
         <Image src={"/snapshot.png"} alt='Snapshot of notepad' width={605} height={280} />
         <Text fontSize={18}>
-          So I wrote it down, put all responsibilities and obligations aside, and let my debilitating habit of procrastination do the rest. So here you go MIMS&apos;25, I give you <span style={{"color": "blue"}}><i><Link href="/">ideas on tap</Link></i></span>.
+          So I wrote it down, put all responsibilities and obligations aside, and let my debilitating habit of procrastination do the rest. And <span style={{"color": "blue"}}><a href="https://cdn.discordapp.com/attachments/964105649095061544/1154338699547512872/IMG_7300.jpg">now here we are</a></span>, with <span style={{"color": "blue"}}><i><Link href="/">ideas on tap</Link></i></span>.
         </Text>
 
       </VStack>
