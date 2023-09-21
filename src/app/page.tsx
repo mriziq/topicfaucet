@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import FetchAPIComponent from './components/getContent';
-import { Box, Kbd, Center, Spacer, VStack } from '@chakra-ui/react';
+import { Box, Kbd, Center, VStack } from '@chakra-ui/react';
 import { keyframes } from '@chakra-ui/system';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -13,9 +13,8 @@ const softlyFlash = keyframes`
   100% { opacity: 1; }
 `;
 
-
-export default function Home() {
-  const [domLoaded, setDomLoaded] = useState(false);
+const Home: React.FC = () => {
+  const [domLoaded, setDomLoaded] = useState<boolean>(false);
 
   useEffect(() => {
     setDomLoaded(true);
@@ -23,26 +22,34 @@ export default function Home() {
 
   return (
     <>
-    <Center paddingTop={50}>
-      <VStack>
-        <Link href={"/about"}>
-      <Image src={"./logo.svg"} alt='Topic Faucit Logo' width={128} height={180}/>
-      </Link>
-      <Box>
-      {domLoaded && (<FetchAPIComponent />)}
-      </Box>
-      <Box 
-      as="div" 
-      display="flex" 
-      justifyContent="center" 
-      alignItems="center" 
-      animation={`${softlyFlash} 2s infinite`}
-      fontSize="lg"
-    >
-      Press<span style={{"marginLeft": 7, "marginRight": 7}}><Kbd>space</Kbd></span>for more
-    </Box>
-    </VStack>
-    </Center>
+      <Center paddingTop={50}>
+        <VStack>
+          <Link href="/about">
+            <a>
+              <Image src="/logo.svg" alt="Topic Faucet Logo" width={128} height={180} />
+            </a>
+          </Link>
+          <Box>
+            {domLoaded && <FetchAPIComponent />}
+          </Box>
+          <Box
+            as="div"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            animation={`${softlyFlash} 2s infinite`}
+            fontSize="lg"
+          >
+            Press
+            <span style={{ marginLeft: 7, marginRight: 7 }}>
+              <Kbd>space</Kbd>
+            </span>
+            for more
+          </Box>
+        </VStack>
+      </Center>
     </>
-  )
-}
+  );
+};
+
+export default Home;

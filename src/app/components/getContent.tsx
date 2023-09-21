@@ -74,11 +74,13 @@ const FetchAPIComponent = () => {
         <Spinner size="xl" />
       ) : data ? (
         <VStack spacing={4} width={"80vw"}>
-          {data.choices[0]?.message?.content.split(',').map((segment, index) => (
-            <Text key={index} fontSize={["24px", "32px", "48px", "64px"]} textAlign="center" color={getRandomColor()} fontWeight={"bold"}>
-              {segment.trim()}
-            </Text>
-          )) || <Text fontSize={["24px", "32px", "48px", "64px"]}>No content available</Text>}
+          {(data.choices[0]?.message?.content && typeof data.choices[0]?.message?.content === 'string' ? 
+            data.choices[0]?.message?.content.split(',').map((segment, index) => (
+              <Text key={index} fontSize={["24px", "32px", "48px", "64px"]} textAlign="center" color={getRandomColor()} fontWeight={"bold"}>
+                {segment.trim()}
+              </Text>
+            )) : <Text fontSize={["24px", "32px", "48px", "64px"]}>No content available</Text>
+          )}
         </VStack>
       ) : error ? (
         <Text fontSize="2xl" color="red.500">
