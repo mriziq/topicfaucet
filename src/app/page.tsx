@@ -36,7 +36,7 @@ export default function Home() {
       animation={`${softlyFlash} 2s infinite`}
       fontSize="lg"
     >
-      Press<span style={{"marginLeft": 7, "marginRight": 7}}><Kbd>space</Kbd></span>for more
+      Refresh or Press<span style={{"marginLeft": 7, "marginRight": 7}}><Kbd>space</Kbd></span>for more
     </Box>
       <Box>
       {domLoaded && (<FetchAPIComponent />)}
@@ -49,7 +49,7 @@ export default function Home() {
       animation={`${softlyFlash} 2s infinite`}
       fontSize="lg"
     >
-      Press<span style={{"marginLeft": 7, "marginRight": 7}}><Kbd>space</Kbd></span>for more
+      Refresh or Press<span style={{"marginLeft": 7, "marginRight": 7}}><Kbd>space</Kbd></span>for more
     </Box>
     </VStack>
     </Center>
