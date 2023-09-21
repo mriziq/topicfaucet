@@ -29,12 +29,12 @@ export default function About() {
           </Text>
         </Box>
         <Text mt={4} fontSize={18}>
-          While trying out some <span style={{"color": "blue"}}><a href='https://medium.com/the-creative-founder/comparative-research-done-right-19710a81fe2b'>Adjacency Analyses</a></span> during <span style={{"color": "blue"}}><a href='https://www.ischool.berkeley.edu/courses/info/215'>Product Design Studio</a></span> at Berkeley&apos;s <span style={{"color": "blue"}}><a href="https://en.wikipedia.org/wiki/UC_Berkeley_School_of_Information">School of Information</a></span>, I struggled to switch contexts when I needed to leave my design problem and look elsewhere for inspiration.
+          While trying out some <span style={{"color": "blue"}}><a href='https://medium.com/the-creative-founder/comparative-research-done-right-19710a81fe2b'>Adjacency Analyses</a></span> exercises during <span style={{"color": "blue"}}><a href='https://www.ischool.berkeley.edu/courses/info/215'>Product Design Studio</a></span> at Berkeley&apos;s <span style={{"color": "blue"}}><a href="https://en.wikipedia.org/wiki/UC_Berkeley_School_of_Information">School of Information</a></span>, I struggled to switch contexts when I needed to leave my design problem and look elsewhere for inspiration.
           And yes, despite the entire human corpus of knowledge at my fingertips, I spent most of the time staring at my screen and mentally checking out to this scene:
         </Text>
         <Image src={"/meme.gif"} alt='Spongebob Running Around Meme' width={480} height={360} />
         <Text fontSize={18}>
-          I was wishing, nay, pleading my screen would just flash me some ideas. Just one word. In big letters that fill the screen. And new ideas every time I press one button, preferably the biggest one on my keyboard. It would be like a tap of ideas.
+          I was wishing, no, pleading my screen would just flash me some ideas. Just one word. Something to get my mind off of <i>picnics</i>. Any word. In big letters that fill the screen. And new ideas every time I press one button, preferably the biggest one on my keyboard. It would be like a tap of ideas.
         </Text>
         <Image src={"/snapshot.png"} alt='Snapshot of notepad' width={605} height={280} />
         <Text fontSize={18}>
