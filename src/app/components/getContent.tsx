@@ -41,7 +41,7 @@ const FetchAPIComponent = () => {
       }
       const result: ApiResponse = await res.json();
       if (!result.choices) {
-        throw new Error("If you're reading this then that means TopicFaucet broke. My bad. I'm doing my best. Anyways, if you're reading this, than email me mriziq@berkeley.edu and let me know what happened.");
+        throw new Error("-------------Oh God, Topic Faucet tried to do something and got hurt in the process.My bad. Kids, am I right? Let me know what happened-------------mriziq@berkeley.edu-------------");
       }
       setData(result);
     } catch (error: any) {
@@ -68,16 +68,17 @@ const FetchAPIComponent = () => {
   }, []);
 
   return (
-    <Center height="100vh">
+    <Center height="19vh">
       {loading ? (
         <Spinner size="xl" />
       ) : data ? (
         <VStack spacing={4} width={['90%', '80%', '60%', '40%']}>
           {data.choices[0]?.message?.content.split(',').map((segment, index) => (
-            <Text key={index} fontSize={["24px", "32px", "48px", "64px"]} textAlign="center">
+            <Text key={index} fontSize={["24px", "32px", "48px", "64px"]} textAlign="center" fontWeight={"bold"}>
               {segment.trim()}
             </Text>
           )) || <Text fontSize={["24px", "32px", "48px", "64px"]}>No content available</Text>}
+          {/* <Text fontSize={["24px", "32px", "48px", "64px"]}>No content available</Text> */}
         </VStack>
       ) : error ? (
         <Text fontSize="2xl" color="red.500">
