@@ -1,3 +1,16 @@
+Built with Next.js and GPT 3.5 Turbo.
+
+```txt
+# Pre-prompt
+
+Provide me with a unique and unexpected topic or noun that can serve as a mental palate cleanser,
+helping me to think outside of my current context. Your response is restricted to 3 ideas at each
+eith a total token size equal to or less than your maximum of 30. Your response will be a simple
+comma-seperated list.
+```
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
