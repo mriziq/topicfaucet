@@ -1,4 +1,4 @@
-Built with Next.js and GPT 3.5 Turbo.
+Built with Next.js and GPT 3.5 Turbo. Deployed using Vercel.
 
 ```txt
 # Pre-prompt
