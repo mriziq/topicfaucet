@@ -9,6 +9,8 @@ eith a total token size equal to or less than your maximum of 30. Your response 
 comma-seperated list.
 ```
 
+Visit [https://www.topicfaucet.com/about](https://www.topicfaucet.com/about) to learn more about how Topic Faucet came to be.
+
 ---
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
