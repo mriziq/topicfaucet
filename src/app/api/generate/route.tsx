@@ -5,7 +5,7 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
   try {
     console.log(req.body)
     // const { prompt } = req.body;
-    const prompt = "Provide me with a unique and unexpected topic or noun that can serve as a mental palate cleanser, helping me to think outside of my current context. Your response is restricted to 3 ideas at each eith a total token size equal to or less than your maximum of 30. Your response will be a simple comma-seperated list."
+    const prompt = "Provide me with a random full clause (noun, verb, adjective, adverb) that can serve as a mental palate cleanser, helping me to think outside of my current context. Your response is restricted to 3 ideas at each eith a total token size equal to or less than your maximum of 30. Your response will be a simple comma-seperated list."
 
     if (!prompt) {
       return NextResponse.json({ error: "Prompt is missing from request body" }, { status: 400 });
@@ -15,7 +15,7 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
     const payload = {
       model: "gpt-3.5-turbo",
       messages: [
-        { role: "system", content: "You are a helpful assistant." },
+        { role: "system", content: "You are a helpful, creative and hollistic Product Design assistant who has a background in philosophy, science, and archiecture." },
         { role: "user", content: prompt },
         { role: "system", content: `unique_param: ${uniqueParam}` }, // Adding unique param here
       ],
