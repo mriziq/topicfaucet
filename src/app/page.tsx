@@ -1,7 +1,7 @@
 "use client"
 
 import FetchAPIComponent from './components/getContent';
-import { Box, Kbd, Center, Spacer, VStack } from '@chakra-ui/react';
+import { Box, Kbd, Center, Spacer, VStack, IconButton, useColorMode } from '@chakra-ui/react';
 import { keyframes } from '@chakra-ui/system';
 import Image from 'next/image';
 import Link from 'next/link';

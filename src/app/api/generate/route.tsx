@@ -5,7 +5,7 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
   try {
     console.log(req.body)
     // const { prompt } = req.body;
-    const prompt = "Provide me with a random full clause (noun, verb, adjective, adverb) that can serve as a mental palate cleanser, helping me to think outside of my current context. Whether you give me a topic or full clause as specifcied before is up to you, be unique. Your response is restricted to 3 ideas at each eith a total token size equal to or less than your maximum of 30. Your response will be a simple comma-seperated list."
+    const prompt = "Provide me with a random creative writing prompt. Your response is restricted to 3 and returned as a simple string where each prompt is separated by a semicolon. Your response should not be an ordered or underdered list, but rather a simple semi-colon separated string "
 
     if (!prompt) {
       return NextResponse.json({ error: "Prompt is missing from request body" }, { status: 400 });
@@ -35,7 +35,7 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
         
     const json = await response.json();
 
-    return NextResponse.json(json, { headers: { "Cache-Control": "no-store, max-age=0" } });
+    return NextResponse.json(json);
 
   } catch (error) {
     if (error instanceof Error) {
