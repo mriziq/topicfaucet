@@ -5,7 +5,7 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
   try {
     console.log(req.body)
     // const { prompt } = req.body;
-    const prompt = "Provide me with a random creative writing prompt. Your response is restricted to 3 and returned as a simple string where each prompt is separated by a semicolon. Your response should not be an ordered or underdered list, but rather a simple semi-colon separated string "
+    const prompt = "Provide me with a random creative writing prompt. Your response is restricted to 2 and returned as a simple string where each prompt is separated by a semicolon. Your response should not be an ordered or underdered list, but rather a simple semi-colon separated string "
 
     if (!prompt) {
       return NextResponse.json({ error: "Prompt is missing from request body" }, { status: 400 });
